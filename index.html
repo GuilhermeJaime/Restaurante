@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kwanza Grill · Cozinha angolana contemporânea em Luanda</title>
+  <meta name="description" content="Sabores de Angola apresentados de uma nova forma. Reserve a sua mesa no Kwanza Grill, em Luanda." />
+  <meta name="theme-color" content="#171512" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#cozinha">Saltar para o conteúdo</a>
+
+  <div id="top">
+    <header class="navbar">
+      <a class="logo logo--light" href="#top" aria-label="Kwanza Grill, início">
+        <span class="logo__mark">K</span>
+        <span><strong>KWANZA</strong><small>GRILL · LUANDA</small></span>
+      </a>
+      <nav class="navbar__links" aria-label="Navegação principal">
+        <a href="#menu">Menu</a>
+        <a href="#cozinha">Sobre nós</a>
+        <a href="#menu">Especialidades</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="navbar__cta"><a href="#reservar">Reservar mesa</a></div>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#menu"><span>01</span>Menu</a>
+        <a href="#cozinha"><span>02</span>Sobre nós</a>
+        <a href="#menu"><span>03</span>Especialidades</a>
+        <a href="#experiencia"><span>04</span>Experiência</a>
+        <a href="#contacto"><span>05</span>Contacto</a>
+        <a class="button button--primary" href="#reservar"><span>Reservar mesa</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero__image" src="https://images.unsplash.com/photo-1692197275441-40c874f40385?auto=format&fit=crop&w=2200&q=88" alt="Prato contemporâneo servido no Kwanza Grill" fetchpriority="high" />
+        <div class="hero__overlay"></div>
+        <div class="hero__ornament" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="kicker">Cozinha angolana contemporânea</p>
+          <h1>SABORES DE ANGOLA<br />APRESENTADOS DE<br />UMA NOVA FORMA</h1>
+          <p class="hero__copy">Uma experiência gastronómica que celebra os sabores, ingredientes e histórias de Angola.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#reservar"><span>Reservar mesa</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
+            <a class="button button--light" href="#menu"><span>Explorar menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
+          </div>
+        </div>
+        <div class="hero__side-note">LUANDA · ANGOLA <span>11:00 — 23:00</span></div>
+        <a class="hero__scroll" href="#cozinha"><span></span>Descobrir</a>
+      </section>
+
+      <section class="kitchen section" id="cozinha">
+        <div class="container kitchen__grid">
+          <div class="kitchen__visual reveal">
+            <img src="https://images.unsplash.com/photo-1750943079462-87bad58cf43e?auto=format&fit=crop&w=1400&q=85" alt="Chef a finalizar um prato com precisão" loading="lazy" />
+            <span class="image-index">01 / COZINHA</span>
+          </div>
+          <div class="kitchen__content reveal">
+            <div class="section-heading">
+              <span class="section-heading__eyebrow">A nossa essência</span>
+              <h2>Nossa cozinha</h2>
+            </div>
+            <p class="lead">Raízes profundas. Uma expressão inteiramente nova.</p>
+            <p>Na Kwanza Grill, revisitamos receitas que atravessam gerações. Combinamos sabores tradicionais angolanos, ingredientes locais e técnicas contemporâneas para criar uma cozinha com memória e futuro.</p>
+            <div class="values"><span>TRADIÇÃO</span><i>•</i><span>IDENTIDADE</span><i>•</i><span>SABOR</span></div>
+            <a class="button button--outline" href="#menu"><span>Conhecer a história</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="menu">
+        <div class="container">
+          <div class="menu-section__top reveal">
+            <div class="section-heading">
+              <span class="section-heading__eyebrow">Uma seleção da nossa carta</span>
+              <h2>Especialidades da casa</h2>
+            </div>
+            <p>Pratos que honram as origens, preparados para surpreender.</p>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrar pratos">
+            <button class="is-active" data-filter="Todos" aria-pressed="true">Todos</button>
+            <button data-filter="Entradas" aria-pressed="false">Entradas</button>
+            <button data-filter="Principais" aria-pressed="false">Principais</button>
+            <button data-filter="Sobremesas" aria-pressed="false">Sobremesas</button>
+          </div>
+
+          <div class="food-grid">
+            <article class="food-card reveal" data-category="Principais">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=82" alt="Mufete à Kwanza" loading="lazy" /><span>Principais</span></div>
+              <div class="food-card__body"><div><h3>Mufete à Kwanza</h3><p>Peixe grelhado, feijão de óleo de palma, banana-pão e mandioca.</p></div><strong>9.800 Kz</strong></div>
+            </article>
+            <article class="food-card reveal" data-category="Principais">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1705775482755-586655a0aaf3?auto=format&fit=crop&w=1000&q=82" alt="Frango no carvão" loading="lazy" /><span>Principais</span></div>
+              <div class="food-card__body"><div><h3>Frango no carvão</h3><p>Frango marinado em especiarias angolanas, milho e molho de ginguba.</p></div><strong>8.500 Kz</strong></div>
+            </article>
+            <article class="food-card reveal" data-category="Principais">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1593854989775-ae5e4d9e49e9?auto=format&fit=crop&w=1000&q=82" alt="Moamba de galinha" loading="lazy" /><span>Principais</span></div>
+              <div class="food-card__body"><div><h3>Moamba de galinha</h3><p>A nossa leitura do clássico, com quiabo jovem e funge cremoso.</p></div><strong>10.200 Kz</strong></div>
+            </article>
+            <article class="food-card reveal" data-category="Principais">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1625943557112-3b3c9186e5c6?auto=format&fit=crop&w=1000&q=82" alt="Peixe grelhado" loading="lazy" /><span>Principais</span></div>
+              <div class="food-card__body"><div><h3>Peixe grelhado</h3><p>Peixe do dia, folhas da horta, citrinos e azeite de ervas.</p></div><strong>11.500 Kz</strong></div>
+            </article>
+            <article class="food-card reveal" data-category="Entradas">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1540961845746-c5c2964bb9d4?auto=format&fit=crop&w=1000&q=82" alt="Croquetes de peixe" loading="lazy" /><span>Entradas</span></div>
+              <div class="food-card__body"><div><h3>Croquetes de peixe</h3><p>Croquetes crocantes, malagueta suave e maionese de limão.</p></div><strong>4.200 Kz</strong></div>
+            </article>
+            <article class="food-card reveal" data-category="Sobremesas">
+              <div class="food-card__image"><img src="https://images.unsplash.com/photo-1727952846147-d406806b169a?auto=format&fit=crop&w=1000&q=82" alt="Mousse de maracujá" loading="lazy" /><span>Sobremesas</span></div>
+              <div class="food-card__body"><div><h3>Mousse de maracujá</h3><p>Maracujá fresco, chocolate branco e crocante de coco.</p></div><strong>3.800 Kz</strong></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experiencia">
+        <div class="container">
+          <div class="experience__header reveal">
+            <div class="section-heading section-heading--light">
+              <span class="section-heading__eyebrow">O espaço Kwanza</span>
+              <h2>Mais do que uma refeição.</h2>
+            </div>
+            <p>No Kwanza Grill, cada prato conta uma história. Criamos um espaço onde a gastronomia angolana encontra uma experiência contemporânea.</p>
+          </div>
+          <div class="experience__gallery reveal">
+            <img class="experience__main" src="https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?auto=format&fit=crop&w=1800&q=85" alt="Interior acolhedor do Kwanza Grill" loading="lazy" />
+            <img class="experience__detail" src="https://images.unsplash.com/photo-1771830916716-1e634c8f431d?auto=format&fit=crop&w=1000&q=85" alt="Detalhe das mesas e materiais naturais" loading="lazy" />
+            <span class="experience__quote">“Um lugar para chegar,<br />ficar e partilhar.”</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation section" id="reservar">
+        <div class="container reservation__grid">
+          <div class="reservation__intro reveal">
+            <div class="section-heading">
+              <span class="section-heading__eyebrow">A sua experiência começa aqui</span>
+              <h2>Reserve a sua mesa</h2>
+            </div>
+            <p>Escolha o melhor momento para viver a experiência Kwanza.</p>
+            <div class="reservation__meta">
+              <span>Para grupos com mais de 8 pessoas</span>
+              <a href="tel:+244900000000">+244 9XX XXX XXX</a>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <form class="reservation-form" id="reservation-form" novalidate>
+              <label class="field"><span>Nome</span><input name="name" type="text" placeholder="O seu nome" autocomplete="name" /><small></small></label>
+              <label class="field"><span>Telefone</span><input name="phone" type="tel" placeholder="+244" autocomplete="tel" inputmode="tel" /><small></small></label>
+              <label class="field"><span>Data</span><input name="date" type="date" /><small></small></label>
+              <label class="field"><span>Hora</span><input name="time" type="time" min="11:00" max="22:30" step="900" /><small></small></label>
+              <label class="field"><span>Número de pessoas</span><input name="guests" type="number" min="1" max="8" placeholder="2 pessoas" inputmode="numeric" /><small></small></label>
+              <button class="button button--primary" type="submit"><span>Confirmar reserva</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></button>
+            </form>
+
+            <div class="reservation-success" id="reservation-success" role="status" hidden>
+              <span>Reserva recebida</span>
+              <h3>A sua mesa está quase pronta.</h3>
+              <p>Entraremos em contacto brevemente para confirmar todos os detalhes.</p>
+              <dl id="reservation-summary"></dl>
+              <button type="button" id="new-reservation">Fazer outra reserva</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contacto">
+        <div class="container contact__grid">
+          <div class="contact__content reveal">
+            <div class="section-heading section-heading--light">
+              <span class="section-heading__eyebrow">Venha visitar-nos</span>
+              <h2>No coração de Luanda</h2>
+            </div>
+            <div class="contact__details">
+              <div><span>Morada</span><strong>Luanda, Angola</strong></div>
+              <div><span>Telefone</span><a href="tel:+244900000000">+244 9XX XXX XXX</a></div>
+              <div><span>Horário</span><strong>Segunda — Domingo<br />11:00 — 23:00</strong></div>
+            </div>
+            <a class="button button--light" href="https://www.google.com/maps/search/?api=1&query=Luanda+Angola" target="_blank" rel="noopener"><span>Como chegar</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
+          </div>
+          <div class="map" role="img" aria-label="Mapa da localização em Luanda">
+            <div class="map__roads"></div>
+            <div class="map__water">BAÍA DE LUANDA</div>
+            <div class="map__pin"><span>K</span><small>Kwanza Grill</small></div>
+            <span class="map__label map__label--one">MARGINAL</span>
+            <span class="map__label map__label--two">ILHA DE LUANDA</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a class="logo logo--light" href="#top" aria-label="Kwanza Grill, início">
+              <span class="logo__mark">K</span>
+              <span><strong>KWANZA</strong><small>GRILL · LUANDA</small></span>
+            </a>
+            <p>Sabores de Angola,<br />apresentados de uma nova forma.</p>
+          </div>
+          <div class="footer__links">
+            <div>
+              <span>Explorar</span>
+              <a href="#menu">Menu</a>
+              <a href="#cozinha">Sobre nós</a>
+              <a href="#menu">Especialidades</a>
+              <a href="#experiencia">Experiência</a>
+            </div>
+            <div>
+              <span>Contacto</span>
+              <a href="tel:+244900000000">+244 9XX XXX XXX</a>
+              <a href="mailto:ola@kwanzagrill.ao">ola@kwanzagrill.ao</a>
+              <p>Luanda, Angola</p>
+            </div>
+          </div>
+          <div class="footer__social">
+            <span>Siga a nossa história</span>
+            <div>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" class="fill" /></svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.6 1.7-1.6H18V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H8v3h3v8" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span id="year">2025</span> Kwanza Grill. Todos os direitos reservados.</span>
+          <div><a href="#">Privacidade</a><a href="#">Termos</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
