@@ -11,7 +11,8 @@
 
   /* ---------- Navbar: fundo ao fazer scroll ---------- */
   const navbar = $(".navbar");
-  const onScroll = () => navbar.classList.toggle("is-scrolled", window.scrollY > 40);
+  const onScroll = () =>
+    navbar.classList.toggle("is-scrolled", window.scrollY > 40);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -27,37 +28,54 @@
     document.body.classList.toggle("no-scroll", open);
   }
 
-  toggle.addEventListener("click", () => setMenu(!toggle.classList.contains("is-open")));
-  $$("a", mobileMenu).forEach((a) => a.addEventListener("click", () => setMenu(false)));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
-  matchMedia("(min-width: 761px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+  toggle.addEventListener("click", () =>
+    setMenu(!toggle.classList.contains("is-open")),
+  );
+  $$("a", mobileMenu).forEach((a) =>
+    a.addEventListener("click", () => setMenu(false)),
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenu(false);
+  });
+  matchMedia("(min-width: 761px)").addEventListener("change", (e) => {
+    if (e.matches) setMenu(false);
+  });
 
   /* ---------- Link ativo conforme a secção visível ---------- */
   const navLinks = $$(".navbar__links a");
   const sections = $$("main section[id]");
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach((a) => a.removeAttribute("aria-current"));
-      const link = navLinks.find((a) => a.getAttribute("href") === `#${entry.target.id}`);
-      if (link) link.setAttribute("aria-current", "true");
-    });
-  }, { rootMargin: "-40% 0px -55% 0px" });
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((a) => a.removeAttribute("aria-current"));
+        const link = navLinks.find(
+          (a) => a.getAttribute("href") === `#${entry.target.id}`,
+        );
+        if (link) link.setAttribute("aria-current", "true");
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" },
+  );
   sections.forEach((s) => spy.observe(s));
 
   /* ---------- Revelar elementos ao entrar no ecrã ---------- */
   const revealEls = $$(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        io.unobserve(entry.target);
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+    );
     revealEls.forEach((el, i) => {
       // pequeno desfasamento entre cartões da mesma linha
-      if (el.classList.contains("food-card")) el.style.transitionDelay = `${(i % 3) * 80}ms`;
+      if (el.classList.contains("food-card"))
+        el.style.transitionDelay = `${(i % 3) * 80}ms`;
       io.observe(el);
     });
   } else {
@@ -92,7 +110,13 @@
 
   /* ---------- Imagens com falha: fundo neutro em vez de ícone quebrado ---------- */
   $$("img").forEach((img) => {
-    img.addEventListener("error", () => { img.style.visibility = "hidden"; }, { once: true });
+    img.addEventListener(
+      "error",
+      () => {
+        img.style.visibility = "hidden";
+      },
+      { once: true },
+    );
   });
 
   /* ---------- Formulário de reserva ---------- */
@@ -107,14 +131,17 @@
 
   const rules = {
     name: (v) => (v.trim().length < 2 ? "Indique o seu nome." : ""),
-    phone: (v) => (/^\+?[\d\s]{9,16}$/.test(v.trim()) ? "" : "Indique um telefone válido."),
+    phone: (v) =>
+      /^\+?[\d\s]{9,16}$/.test(v.trim()) ? "" : "Indique um telefone válido.",
     date: (v) => {
       if (!v) return "Escolha uma data.";
       return v < dateInput.min ? "Escolha uma data a partir de hoje." : "";
     },
     time: (v) => {
       if (!v) return "Escolha uma hora.";
-      return v < "11:00" || v > "22:30" ? "Atendemos entre as 11:00 e as 22:30." : "";
+      return v < "11:00" || v > "22:30"
+        ? "Atendemos entre as 11:00 e as 22:30."
+        : "";
     },
     guests: (v) => {
       const n = Number(v);
